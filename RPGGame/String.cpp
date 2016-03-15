@@ -49,18 +49,6 @@ char String::CharacterAtIndex(int i)
 	return temp;
 }
 
-// Prepends another string to this string class
-void String::AddToStart(const String &D)
-{
-	char* tempString1 = new char[strlen(m_string) + 1];
-	tempString1[0] = 0;
-	strcpy(tempString1, m_string);
-	const int length = strlen(tempString1) + strlen(D.m_string) + 2;
-	strcpy(m_string, D.m_string);
-	strcat(m_string, tempString1);
-	delete[] tempString1;
-}
-
 // Returns a temporary string class, with all letters converted to lower case, which will use the Copy Constructor 
 // and properly delete that piece of memory when it is done
 String String::LowCaseDuplicate()
@@ -112,18 +100,24 @@ int String::SubString(const String &subString)
 	int numberOfLetters = strlen(subString.m_string);
 	int matches = 0;
 	int startIndex = 0;
+	bool foundStartIndex = false;
 	int endIndex = 0;
 	for (int i = 0; i < strlen(m_string); i++)
 	{
 		char temp = subString.m_string[matches];
 		if (m_string[i] == temp)
 		{
-			startIndex = i;
+			if (foundStartIndex == false)
+			{
+				startIndex = i;
+				foundStartIndex = true;
+			}			
 			matches += 1;
 		}
 		else
 		{
 			startIndex = 0;
+			foundStartIndex = false;
 			matches = 0;
 		}
 

@@ -15,7 +15,6 @@ public:
 	const char* GetString();
 	int Length();
 	char CharacterAtIndex(int i);	
-	void AddToStart(const String &D);	
 	String LowCaseDuplicate();		
 	String UpperCaseDuplicate();	
 	int SubString(const String& subString);		
@@ -41,16 +40,14 @@ public:
 	}
 
 	bool operator == (const char newString[])
-	{	
-		//std::cout << newString << "\n";
+	{			
 		int tempArrayLength = strlen(m_string);
 		int characterCheck = 0;
 		bool matchFound = false;
 		for (int i = 0; i < tempArrayLength; i++)
 		{
 			if (m_string[i] == newString[i])
-			{
-				std::cout << newString[i];
+			{				
 				characterCheck++;
 			}
 			if (characterCheck == tempArrayLength)
