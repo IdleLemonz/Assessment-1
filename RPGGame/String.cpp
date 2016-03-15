@@ -22,10 +22,19 @@ String::~String()
 // Set the string in the string class
 void String::Set(char newString[])
 {
+	int count = 0;
 	for (int i = 0; i < strlen(newString); ++i)
 	{
+		count++;
 		m_string[i] = newString[i];
 	}
+	m_string[count] = 0;
+}
+void String::SetInput()
+{
+	std::string tempString;
+	std::cin >> tempString;	
+	strcpy(m_string, tempString.c_str());	
 }
 // Print the string in the string class
 void String::Print()
@@ -112,6 +121,41 @@ int String::SubString(const String &subString)
 				startIndex = i;
 				foundStartIndex = true;
 			}			
+			matches += 1;
+		}
+		else
+		{
+			startIndex = 0;
+			foundStartIndex = false;
+			matches = 0;
+		}
+
+		if (matches == numberOfLetters)
+		{
+			endIndex = i;
+			return startIndex;
+		}
+	}
+}
+
+// Returns the starting index of a sub-string within a String class (containing char* array), starting from a specified index
+int String::SubStringFromIndex(const String& subString, int indexI)
+{
+	int numberOfLetters = strlen(subString.m_string);
+	int matches = 0;
+	int startIndex = 0;
+	int endIndex = 0;
+	bool foundStartIndex = false;
+	for (int i = indexI; i < strlen(m_string); i++)
+	{
+		char temp = subString.m_string[matches];
+		if (m_string[i] == temp)
+		{			
+			if (foundStartIndex == false)
+			{				
+				startIndex = i;
+				foundStartIndex = true;
+			}
 			matches += 1;
 		}
 		else

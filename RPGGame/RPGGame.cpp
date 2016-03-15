@@ -117,7 +117,8 @@ int main()
 		std::cout << "Test failed. \n\n";
 	}*/
 
-	String heroName5("nab");	
+	// Testing the SubString() function, if it returns the correct starting index of a String Class / Sub-string
+	/*String heroName5("nab");	
 	std::cout << heroName.SubString(heroName5) << "\n";
 	if (heroName.SubString(heroName5) == 3)
 	{
@@ -128,7 +129,50 @@ int main()
 	{
 		testPassed = false;
 		std::cout << "Test failed. \n\n";
+	}*/
+
+	// Testing the ability to find a substring within a string by returning the starting index, 
+	// starting from a certin index within the string
+	/*String heroName6("nab");
+	std::cout << heroName.SubStringFromIndex(heroName6, 1) << "\n";
+	if (heroName.SubStringFromIndex(heroName6, 1) == 3)
+	{
+		testPassed = true;
+		std::cout << "Test passed. \n\n";
 	}
+	else
+	{
+		testPassed = false;
+		std::cout << "Test failed. \n\n";
+	}*/
+
+	// Testing ReplaceSubString() function to replace a sub-string within the string class with another sub-string
+	/*String heroName7("rna");
+	String heroName8("carrot");
+	heroName.ReplaceSubString(heroName7, heroName8);	
+	if (heroName == "Bacarrotby")
+	{
+		testPassed = true;
+		std::cout << "Test passed. \n\n";
+	}
+	else
+	{
+		testPassed = false;
+		std::cout << "Test failed. \n\n";
+	}*/
+
+	// Testing Set() function to set the string to something different	
+	/*heroName.SetInput();	
+	if (heroName == "Chocolate")
+	{
+		testPassed = true;
+		std::cout << "Test passed. \n\n";
+	}
+	else
+	{
+		testPassed = false;
+		std::cout << "Test failed. \n\n";
+	}*/
 
 	system("PAUSE");
     return 0;

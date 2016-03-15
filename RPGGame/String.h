@@ -11,6 +11,7 @@ public:
 	~String();
 
 	void Set(char newString[]);
+	void SetInput();
 	void Print();	
 	const char* GetString();
 	int Length();
@@ -18,6 +19,7 @@ public:
 	String LowCaseDuplicate();		
 	String UpperCaseDuplicate();	
 	int SubString(const String& subString);		
+	int SubStringFromIndex(const String& subString, int indexI);
 	void ReplaceSubString(const String& subStringFind, const String& subStringReplace);
 
 	bool operator == (const String & other)
