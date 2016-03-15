@@ -14,27 +14,11 @@ public:
 	void Print();	
 	const char* GetString();
 	int Length();
-	char CharacterAtIndex(int i);
-	bool Compare(const char newString[]);
-	void Add(const char addString[]);
-	void Add(const String &D);
-	void AddSpace(const char addString[]);
-	void AddSpace(const String &D);
-	void AddToStart(const char addString[]);
-	void AddToStart(const String &D);
-	void AddToStartSpace(const char addString[]);
-	void AddToStartSpace(const String &D);
-	void ToLowCase();
-	String LowCaseReturn();	
-	void ToUpperCase();
-	String UpperCaseReturn();
-	int SubString(const char subString[]);
-	int SubString(const String& subString);
-	int SubStringFromIndex(const char subString[], int indexI);
-	int SubStringFromIndex(const String& subString, int indexI);
-	void ReplaceSubString(const char subStringFind[], const char subStringReplace[]);
-	void ReplaceSubString(const String& subStringFind, const char subStringReplace[]);
-	void ReplaceSubString(const char subStringFind[], const String& subStringReplace);
+	char CharacterAtIndex(int i);	
+	void AddToStart(const String &D);	
+	String LowCaseDuplicate();		
+	String UpperCaseDuplicate();	
+	int SubString(const String& subString);		
 	void ReplaceSubString(const String& subStringFind, const String& subStringReplace);
 
 	bool operator == (const String & other)
@@ -82,6 +66,10 @@ public:
 		strcpy(m_string, newString);
 	}
 
+	//unused but functional classes, in case I need them later
+	//bool Compare(const char newString[]);	
+	//void ToUpperCase();
+	//void ToLowCase();
 private:
 	char* m_string;	
 };
