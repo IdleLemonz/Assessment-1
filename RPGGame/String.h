@@ -40,6 +40,27 @@ public:
 		return matchFound;
 	}
 
+	bool operator == (const char newString[])
+	{	
+		//std::cout << newString << "\n";
+		int tempArrayLength = strlen(m_string);
+		int characterCheck = 0;
+		bool matchFound = false;
+		for (int i = 0; i < tempArrayLength; i++)
+		{
+			if (m_string[i] == newString[i])
+			{
+				std::cout << newString[i];
+				characterCheck++;
+			}
+			if (characterCheck == tempArrayLength)
+			{
+				matchFound = true;
+			}
+		}		
+		return matchFound;
+	}
+
 	std::string operator + (String & other)
 	{			
 		std::string tempString = m_string;
