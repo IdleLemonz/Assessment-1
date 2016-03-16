@@ -1,0 +1,12 @@
+Test 0	Length()	Successful
+Test 1	CharacterAtIndex()	Successful
+Test 2	Compare 2 string classes	Successful
+Test 3	Append one string to another	Successful
+Test 4	Prepend one string to another	Successful
+Test 5	GetString()	Successful
+Test 6	LowCaseDuplicate()	Successful
+Test 7	UpperCaseDuplicate()	Successful
+Test 8	SubString()	Successful
+Test 9	SubStringFromIndex()	Successful
+Test 10	ReplaceSubString()	Successful
+Test 11	Set()	Successful
