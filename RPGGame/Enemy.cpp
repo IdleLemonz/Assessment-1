@@ -3,10 +3,18 @@
 #include <string>
 
 
-Enemy::Enemy() {}
-Enemy::~Enemy() 
+Enemy::Enemy() 
 {
-	delete[] m_name;
+}
+
+//Enemy::Enemy(const Enemy& other)
+//{
+//	m_name = new char[strlen(other.m_name) + 1];
+//	strcpy(m_name, other.m_name);
+//}
+
+Enemy::~Enemy() 
+{	
 }
 
 int Enemy::GetHealth()

@@ -4,6 +4,9 @@
 Player::Player()
 {
 }
+//Player::Player(const Player& other)
+//{	
+//}
 Player::~Player()
 {
 }

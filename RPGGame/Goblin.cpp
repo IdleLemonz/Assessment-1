@@ -9,7 +9,16 @@ Goblin::Goblin()
 	m_name = "Goblin";
 }
 
-Goblin::~Goblin(){}
+//Goblin::Goblin(const Goblin& other)
+//{
+//	m_name = new char[strlen(other.m_name) + 1];
+//	strcpy(m_name, other.m_name);
+//}
+
+Goblin::~Goblin()
+{
+	//delete[] m_name;
+}
 
 int Goblin::GetHealth()
 {

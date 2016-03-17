@@ -20,10 +20,12 @@ String::~String()
 	delete[] m_string;
 }
 // Set the string in the string class
-void String::Set(char* string)
+void String::Set(const char * name)
 {
-	strcpy(m_string, string);
+	m_string = new char[strlen(name) + 1];
+	strcpy(m_string, name);
 }
+
 void String::SetInput()
 {
 	std::string tempString;

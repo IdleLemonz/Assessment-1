@@ -10,7 +10,7 @@ public:
 	String(const String& other);
 	~String();
 
-	void Set(char string[]);
+	void String::Set(const char * name);
 	void SetInput();
 	void Print();	
 	const char* GetString();
@@ -69,6 +69,14 @@ public:
 	}
 
 	std::string operator + (const char* other)
+	{
+		std::string tempString = m_string;
+		std::string tempString2 = other;
+		std::string tempString3 = tempString + tempString2;
+		return tempString3;
+	}
+
+	std::string operator + (std::string other)
 	{
 		std::string tempString = m_string;
 		std::string tempString2 = other;

@@ -6,6 +6,7 @@ class Goblin : public Enemy
 {
 public:
 	Goblin();
+	//Goblin(const Goblin& other);
 	~Goblin();
 	int GetHealth();
 	int GetAttack();

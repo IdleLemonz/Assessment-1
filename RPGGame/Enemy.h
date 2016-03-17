@@ -5,6 +5,7 @@ class Enemy
 {
 public:
 	Enemy();
+	//Enemy(const Enemy& other);
 	~Enemy();
 	virtual int GetHealth();
 	virtual int GetAttack();

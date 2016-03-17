@@ -5,6 +5,7 @@ class Player
 {
 public:
 	Player();
+	//Player(const Player& other);
 	~Player();
 	int GetAttack();
 	int GetHealth();
