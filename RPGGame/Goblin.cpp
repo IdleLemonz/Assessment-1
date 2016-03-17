@@ -35,6 +35,21 @@ const std::string Goblin::GetName()
 	return m_name;
 }
 
+void Goblin::Appears()
+{
+	if (m_firstTimeAppearance)
+	{
+		std::cout << "A shriek startles you. From out of the shadows hurtles a bizarre creature - a goblin. It is large and hideous; humanoid in shape, wearing the ";
+		std::cout << "skind of animals upon it's body. It's arms are long so that it scrapes it's knuckles along the ground. It's ";
+		std::cout << "Features are stupid but menacing; it's large lower jaw juts out, with long, yellowed teeth protruding out. ";
+		std::cout << "It raises it's club to attack. What will you do?\n\n";
+	}
+	else
+	{
+		std::cout << "A menacing goblin dashes towards you, scraping it's knuckles upon the ground. What will you do?\n\n";
+	}
+}
+
 //void Goblin::TakeDamage(int playerAttack, bool counterCheck)
 //{		
 //	int attackHitChance = rand() % 7 + 1;

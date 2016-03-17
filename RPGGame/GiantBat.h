@@ -15,7 +15,7 @@ public:
 	int GetAttack();
 	const std::string GetName();
 	void Appears();	
-	//void FirstAppearance();		
+	void FirstAppearance();		
 	//String myString;
 
 	//int DodgeChance();

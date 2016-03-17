@@ -21,10 +21,10 @@ int main()
 	GiantBat bat;
 	while (gameLoop)
 	{
-		BattleStart(bat, hero);
+		BattleStart(goblin, hero);
 		gameLoop = false;		
 	}
-		
+	system("PAUSE");
     return 0;
 }
 
@@ -66,6 +66,8 @@ void BattleStart(Enemy &enemy, Player &player)
 				counterSuccess = false;
 				break;
 			case 3:
+				std::cout << "You flee the " << enemy.GetName() << ".\n\n";
+				battle = false;
 				break;
 			default:
 				break;

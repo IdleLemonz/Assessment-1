@@ -17,6 +17,6 @@ protected:
 	int m_attack;
 	int m_dodgeChance;
 	bool m_firstTimeAppearance;
-	char* m_name;
+	std::string m_name;
 };
 
