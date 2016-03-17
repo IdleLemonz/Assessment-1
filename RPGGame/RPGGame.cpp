@@ -2,18 +2,42 @@
 #include "String.h"
 #include <string>
 #include <fstream>
+#include "Player.h"
+#include "Enemy.h"
+#include "Goblin.h"
+#include "GiantBat.h"
+#include <stdio.h>      /* printf, scanf, puts, NULL */
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
+
+void BattleStart(Enemy &enemy, Player &player);
 
 int main()
 {
-	String heroName("Barnaby");
-	String heroName2("Barnaby");
-	String heroName3("Junior");
-	String heroName4("Something");	
-	bool testPassed = false;
 
-	std::fstream file;
-	file.open("UnitTest.txt", std::ios_base::app);
+	srand(time(NULL));
+	bool gameLoop = true;
+	Player hero;
+	Goblin goblin;
+	GiantBat bat;
+	while (gameLoop)
+	{
+		BattleStart(bat, hero);
+		gameLoop = false;
+		system("PAUSE");
+	}
 
+	
+
+
+	// Unit Testing code
+	//String heroName("Barnaby");
+	//String heroName2("Barnaby");
+	//String heroName3("Junior");
+	//String heroName4("Something");
+	//bool testPassed = false;
+	//std::fstream file;
+	//file.open("UnitTest.txt", std::ios_base::app);
 	// Test Length() function	
 	/*if (heroName.Length() == 7)
 	{
@@ -203,3 +227,53 @@ int main()
     return 0;
 }
 
+void BattleStart(Enemy &enemy, Player &player)
+{
+	bool battle = true;
+	bool startOfBattle = true;
+	while (battle)
+	{
+		if (startOfBattle)
+		{
+			startOfBattle = false;
+			enemy.Appears();			
+		}
+		if (enemy.GetHealth() > 0)
+		{
+			std::cout << "1. Attack \n2. Defend \n3. Run \n\nChoice: ";
+			int choice = 0;
+			std::cin >> choice;
+			std::cout << std::endl;
+			bool counterSuccess = false;
+			switch (choice)
+			{
+			case 1:
+				player.Attack(enemy);
+				if (enemy.GetHealth() > 0)
+				{
+					player.TakeDamage(enemy);
+				}
+				break;
+			case 2:
+				std::cout << "You prepare to defend yourself from the " << enemy.GetName() << ".\n";
+				counterSuccess = player.Defend(enemy.GetAttack());
+				if (counterSuccess)
+				{
+					std::cout << "You succeed in a counter attack.\n";
+					player.Counter(enemy);
+				}
+				counterSuccess = false;
+				break;
+			case 3:
+				break;
+			default:
+				break;
+			}
+		}
+		else if (enemy.GetHealth() <= 0)
+		{
+			std::cout << "You won!\n\n";
+			battle = false;
+		}		
+	}
+}

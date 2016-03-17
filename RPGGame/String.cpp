@@ -20,15 +20,9 @@ String::~String()
 	delete[] m_string;
 }
 // Set the string in the string class
-void String::Set(char newString[])
+void String::Set(char* string)
 {
-	int count = 0;
-	for (int i = 0; i < strlen(newString); ++i)
-	{
-		count++;
-		m_string[i] = newString[i];
-	}
-	m_string[count] = 0;
+	strcpy(m_string, string);
 }
 void String::SetInput()
 {
@@ -240,6 +234,9 @@ void String::ReplaceSubString(const String& subStringFind, const String& subStri
 		strcpy(m_string, tempString1);		
 		strcat(m_string, subStringReplace.m_string);
 		strcat(m_string, tempString2);		
+
+		delete[] tempString1;
+		delete[] tempString2;
 	}
 }
 

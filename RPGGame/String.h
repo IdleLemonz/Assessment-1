@@ -7,10 +7,10 @@ class String
 public:
 	String();
 	String(const char * name);
-	String::String(const String& other);
+	String(const String& other);
 	~String();
 
-	void Set(char newString[]);
+	void Set(char string[]);
 	void SetInput();
 	void Print();	
 	const char* GetString();
@@ -63,11 +63,16 @@ public:
 	std::string operator + (String & other)
 	{			
 		std::string tempString = m_string;
-		std::string tempString2 = other.m_string;
-		//std::cout << tempString << "\n";
-		//std::cout << tempString2 << "\n";
-		std::string tempString3 = tempString + tempString2;	
-		//std::cout << tempString3 << "\n";
+		std::string tempString2 = other.m_string;	
+		std::string tempString3 = tempString + tempString2;		
+		return tempString3;
+	}
+
+	std::string operator + (const char* other)
+	{
+		std::string tempString = m_string;
+		std::string tempString2 = other;
+		std::string tempString3 = tempString + tempString2;
 		return tempString3;
 	}
 
