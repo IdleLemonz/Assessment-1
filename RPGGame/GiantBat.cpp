@@ -2,7 +2,6 @@
 #include "String.h"
 #include "Player.h"
 #include <iostream>
-//comment
 
 GiantBat::GiantBat() //: myString("Something")
 {
@@ -10,7 +9,7 @@ GiantBat::GiantBat() //: myString("Something")
 	m_attack = 4;
 	m_name = "Giant Bat";
 	m_dodgeChance = 5;
-	//m_firstTimeAppearance = true;
+	m_firstTimeAppearance = true;
 }
 
 //GiantBat::GiantBat(const GiantBat& other)
@@ -34,10 +33,10 @@ int GiantBat::GetAttack()
 	return m_attack;
 }
 
-void GiantBat::Appears(Player &player)
+void GiantBat::Appears()
 {
-	//if (player.)
-	//{		 		
+	if (m_firstTimeAppearance)
+	{		 		
 		//myString = "Wowza";
 		//std::cout << myString.GetString();
 		//FirstAppearance();
@@ -47,11 +46,11 @@ void GiantBat::Appears(Player &player)
 		std::cout << " buffeting you with great gusts of wind. The Giant Bat";
 		std::cout << " flies quickly from side to side, sizing you up. It looks like it could dodge your attacks easily. ";
 		std::cout << "It's eyes blaze red as it prepares to attack. What will you do?\n\n";
-	//}
-	//else
-	//{
+	}
+	else
+	{
 		std::cout << "A Giant Bat hurtles towards you, preparing to attack. What will you do?\n\n";
-	//}
+	}
 }
 
 const std::string GiantBat::GetName()
@@ -59,15 +58,15 @@ const std::string GiantBat::GetName()
 	return m_name;
 }
 
-void GiantBat::FirstAppearance()
-{
-	//myString = myString + m_name;
-	//myString = myString + " looms over you, it's enormous wings buffeting you with great gusts of wind. The ";
-	//myString = myString + m_name;
-	//myString = myString + " flies quickly from side to side, sizing you up. It looks like it could dodge your attacks easily. ";
-	//myString = myString + "It's eyes blaze red as it prepares to attack. What will you do?\n\n";
-	//std::cout << myString.GetString();
-}
+//void GiantBat::FirstAppearance()
+//{
+//	//myString = myString + m_name;
+//	//myString = myString + " looms over you, it's enormous wings buffeting you with great gusts of wind. The ";
+//	//myString = myString + m_name;
+//	//myString = myString + " flies quickly from side to side, sizing you up. It looks like it could dodge your attacks easily. ";
+//	//myString = myString + "It's eyes blaze red as it prepares to attack. What will you do?\n\n";
+//	//std::cout << myString.GetString();
+//}
 
 //int GiantBat::DodgeChance()
 //{

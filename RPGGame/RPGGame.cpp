@@ -14,8 +14,7 @@
 void BattleStart(Enemy &enemy, Player &player);
 
 int main()
-{
-	//comment
+{	
 	srand(time(NULL));
 	bool gameLoop = true;
 	Player hero;	

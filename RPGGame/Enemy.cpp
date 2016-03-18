@@ -29,10 +29,10 @@ int Enemy::GetAttack()
 }
 const std::string Enemy::GetName()
 {
-	return m_name;//comment
+	return m_name;
 }
 
-void Enemy::Appears(Player &player)
+void Enemy::Appears()
 {
 	std::cout << "An enemy appears.\n\n";
 }

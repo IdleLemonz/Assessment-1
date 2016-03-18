@@ -4,7 +4,7 @@
 #include "Goblin.h"
 #include "Player.h"
 #include <string>
-//comment
+
 class GiantBat :
 	public Enemy
 {
@@ -15,8 +15,8 @@ public:
 	int GetHealth();
 	int GetAttack();
 	const std::string GetName();
-	void Appears(Player &player);
-	void FirstAppearance();		
+	void Appears();
+	//void FirstAppearance();		
 	//String myString;
 
 	//int DodgeChance();

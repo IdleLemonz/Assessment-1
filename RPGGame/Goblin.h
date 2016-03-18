@@ -2,7 +2,7 @@
 #include "Enemy.h"
 #include "Player.h"
 #include <string>
-//comment
+
 class Goblin : public Enemy
 {
 public:
@@ -12,7 +12,7 @@ public:
 	int GetHealth();
 	int GetAttack();
 	const std::string GetName();
-	void Appears(Player &player);
+	void Appears();
 	//void TakeDamage(int playerAttack, bool counterCheck);	
 };
 
