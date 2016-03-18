@@ -15,15 +15,16 @@ void BattleStart(Enemy &enemy, Player &player);
 
 int main()
 {
+
 	srand(time(NULL));
 	bool gameLoop = true;
 	Player hero;	
 	while (gameLoop)
-	{		
+	{	
+		//hero.MonsterEncounters(0);
 		Battle battle;
-		battle.Start(battle.WhichCreature(), hero);
-		
-		//gameLoop = false;		
+		battle.Start(battle.WhichCreature(), hero);		
+		gameLoop = false;		
 	}
 	system("PAUSE");
     return 0;

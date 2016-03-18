@@ -1,4 +1,5 @@
 #include "Enemy.h"
+#include "Player.h"
 #include <iostream>
 #include <string>
 
@@ -31,7 +32,7 @@ const std::string Enemy::GetName()
 	return m_name;
 }
 
-void Enemy::Appears()
+void Enemy::Appears(Player &player)
 {
 	std::cout << "An enemy appears.\n\n";
 }

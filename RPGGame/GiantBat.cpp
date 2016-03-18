@@ -1,5 +1,6 @@
 #include "GiantBat.h"
 #include "String.h"
+#include "Player.h"
 #include <iostream>
 
 GiantBat::GiantBat() //: myString("Something")
@@ -8,7 +9,7 @@ GiantBat::GiantBat() //: myString("Something")
 	m_attack = 4;
 	m_name = "Giant Bat";
 	m_dodgeChance = 5;
-	m_firstTimeAppearance = true;
+	//m_firstTimeAppearance = true;
 }
 
 //GiantBat::GiantBat(const GiantBat& other)
@@ -32,10 +33,10 @@ int GiantBat::GetAttack()
 	return m_attack;
 }
 
-void GiantBat::Appears()
+void GiantBat::Appears(Player &player)
 {
-	if (m_firstTimeAppearance)
-	{		 		
+	//if (player.)
+	//{		 		
 		//myString = "Wowza";
 		//std::cout << myString.GetString();
 		//FirstAppearance();
@@ -45,11 +46,11 @@ void GiantBat::Appears()
 		std::cout << " buffeting you with great gusts of wind. The Giant Bat";
 		std::cout << " flies quickly from side to side, sizing you up. It looks like it could dodge your attacks easily. ";
 		std::cout << "It's eyes blaze red as it prepares to attack. What will you do?\n\n";
-	}
-	else
-	{
+	//}
+	//else
+	//{
 		std::cout << "A Giant Bat hurtles towards you, preparing to attack. What will you do?\n\n";
-	}
+	//}
 }
 
 const std::string GiantBat::GetName()

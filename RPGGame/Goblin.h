@@ -1,5 +1,6 @@
 #pragma once
 #include "Enemy.h"
+#include "Player.h"
 #include <string>
 
 class Goblin : public Enemy
@@ -11,7 +12,7 @@ public:
 	int GetHealth();
 	int GetAttack();
 	const std::string GetName();
-	void Appears();
+	void Appears(Player &player);
 	//void TakeDamage(int playerAttack, bool counterCheck);	
 };
 

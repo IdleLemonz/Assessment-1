@@ -2,6 +2,7 @@
 #include "Enemy.h"
 #include "String.h"
 #include "Goblin.h"
+#include "Player.h"
 #include <string>
 
 class GiantBat :
@@ -14,7 +15,7 @@ public:
 	int GetHealth();
 	int GetAttack();
 	const std::string GetName();
-	void Appears();	
+	void Appears(Player &player);
 	void FirstAppearance();		
 	//String myString;
 

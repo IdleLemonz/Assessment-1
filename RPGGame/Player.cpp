@@ -3,6 +3,7 @@
 
 Player::Player()
 {
+	//int m_monsterEncounters[10] = { 0,0,0,0,0,0,0,0,0,0 };
 }
 //Player::Player(const Player& other)
 //{	
@@ -149,3 +150,10 @@ int Player::ArmourDefense()
 		return armourDefense;
 	}
 }
+
+//int Player::MonsterEncounters(int i)
+//{
+//	std::cout << m_monsterEncounters[i];
+//	return 0;
+//	//return m_monsterEcounters[i];
+//}
