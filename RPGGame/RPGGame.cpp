@@ -6,6 +6,7 @@
 #include "Enemy.h"
 #include "Goblin.h"
 #include "GiantBat.h"
+#include "Battle.h"
 #include <stdio.h>      /* printf, scanf, puts, NULL */
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
@@ -16,24 +17,11 @@ int main()
 {
 	srand(time(NULL));
 	bool gameLoop = true;
-	Player hero;
-	Goblin goblin;
-	GiantBat bat;
+	Player hero;	
 	while (gameLoop)
 	{		
-		int creature = rand() % 2 + 1;
-		switch (creature)
-		{
-		case 1:
-			BattleStart(bat, hero);
-			break;
-		case 2:
-			BattleStart(goblin, hero);
-			break;
-		default:
-			std::cout << "Whoops";
-			break;
-		}
+		Battle battle;
+		battle.Start(battle.WhichCreature(), hero);
 		
 		//gameLoop = false;		
 	}
