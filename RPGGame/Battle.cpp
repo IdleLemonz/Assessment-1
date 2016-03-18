@@ -7,7 +7,7 @@
 #include "String.h"
 #include <string>
 
-
+//comment
 
 Battle::Battle()
 {

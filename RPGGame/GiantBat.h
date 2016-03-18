@@ -4,7 +4,7 @@
 #include "Goblin.h"
 #include "Player.h"
 #include <string>
-
+//comment
 class GiantBat :
 	public Enemy
 {

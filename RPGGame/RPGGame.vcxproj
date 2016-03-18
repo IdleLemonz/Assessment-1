@@ -145,7 +145,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Battle.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="GiantBat.h" />
     <ClInclude Include="Goblin.h" />
@@ -155,7 +154,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Battle.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GiantBat.cpp" />
     <ClCompile Include="Goblin.cpp" />

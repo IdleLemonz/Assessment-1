@@ -25,3 +25,4 @@ private:
 	//int m_monsterEncounters[10];
 };
 
+//comment

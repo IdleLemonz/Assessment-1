@@ -6,7 +6,7 @@
 #include <iostream>
 #include "String.h"
 #include <string>
-
+//comment
 class Battle
 {
 public:

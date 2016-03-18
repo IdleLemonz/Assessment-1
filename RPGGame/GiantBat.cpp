@@ -2,6 +2,7 @@
 #include "String.h"
 #include "Player.h"
 #include <iostream>
+//comment
 
 GiantBat::GiantBat() //: myString("Something")
 {

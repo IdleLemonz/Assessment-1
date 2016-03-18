@@ -3,6 +3,7 @@
 #include <string>
 String::String()
 {
+	//comment
 }
 
 String::String(const String& other)
