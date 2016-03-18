@@ -57,7 +57,7 @@ void Player::TakeDamage(Enemy &enemy)
 	{
 		if (m_health > 0)
 		{
-			int damagetaken = enemy.GetAttack() + (rand() % enemy.GetAttack());
+			int damagetaken = enemy.GetAttack() + (rand() % enemy.GetAttack()) - ArmourDefense();
 			m_health -= damagetaken;
 			if (m_health <= 0)
 			{
@@ -83,7 +83,9 @@ void Player::TakeDamage(Enemy &enemy)
 
 int Player::GetAttack()
 {
-	return m_attack;
+	int totalAttack = m_attack + WeaponDamage();
+	//std::cout << "Total Attack: " << totalAttack;
+	return totalAttack;
 }
 
 int Player::GetHealth()
@@ -94,10 +96,56 @@ int Player::GetHealth()
 void Player::Attack(Enemy &enemy)
 {
 	std::cout << "You swing your blade at the " << enemy.GetName() << ".\n";
-	enemy.TakeDamage(m_attack, false);
+	enemy.TakeDamage(GetAttack(), false);
 }
 
 void Player::Counter(Enemy &enemy)
 {
-	enemy.TakeDamage(m_attack - (m_attack / 4), true);
+	enemy.TakeDamage(GetAttack() - (m_attack / 4), true);
+}
+
+int Player::WeaponDamage()
+{
+	int weaponAttack = 0;
+	switch (m_weapon)
+	{
+	case 0:
+		weaponAttack = 0;
+		return weaponAttack;
+	case 1:
+		weaponAttack = 2;
+		return weaponAttack;
+	case 2:
+		weaponAttack = 4;
+		return weaponAttack;
+	case 3:
+		weaponAttack = 6;
+		return weaponAttack;
+	default:
+		weaponAttack = 0;
+		return weaponAttack;
+	}
+}
+
+int Player::ArmourDefense()
+{
+	int armourDefense = 0;
+	switch (m_armour)
+	{
+	case 0:
+		armourDefense = 0;
+		return armourDefense;
+	case 1:
+		armourDefense = 2;
+		return armourDefense;
+	case 2:
+		armourDefense = 4;
+		return armourDefense;
+	case 3:
+		armourDefense = 6;
+		return armourDefense;
+	default:
+		armourDefense = 0;
+		return armourDefense;
+	}
 }

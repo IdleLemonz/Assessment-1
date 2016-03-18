@@ -20,9 +20,22 @@ int main()
 	Goblin goblin;
 	GiantBat bat;
 	while (gameLoop)
-	{
-		BattleStart(goblin, hero);
-		gameLoop = false;		
+	{		
+		int creature = rand() % 2 + 1;
+		switch (creature)
+		{
+		case 1:
+			BattleStart(bat, hero);
+			break;
+		case 2:
+			BattleStart(goblin, hero);
+			break;
+		default:
+			std::cout << "Whoops";
+			break;
+		}
+		
+		//gameLoop = false;		
 	}
 	system("PAUSE");
     return 0;

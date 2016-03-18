@@ -38,12 +38,14 @@ void Enemy::Appears()
 
 void Enemy::TakeDamage(int playerAttack, bool counterCheck)
 {
-	int attackHitChance = rand() % 7 + 1;
+	int attackHitChance = rand() % m_dodgeChance + 1;
+	//std::cout << "Dodge Chance: " << m_dodgeChance << ", " << m_name << ".\n\n";
 	if (attackHitChance >= 2 || counterCheck == true)
 	{
 		if (m_health > 0)
 		{
 			int damageTaken = playerAttack + (rand() % playerAttack);
+			//std::cout << "Total Attack: " << damageTaken;
 			m_health -= damageTaken;
 			if (m_health <= 0)
 			{
@@ -52,7 +54,7 @@ void Enemy::TakeDamage(int playerAttack, bool counterCheck)
 			}
 			else
 			{
-				std::cout << "The " << m_name << " took " << " damage and has " << m_health << " health left.\n\n";
+				std::cout << "The " << m_name << " took " << damageTaken << " damage and has " << m_health << " health left.\n\n";
 			}
 		}
 		else
