@@ -6,7 +6,6 @@
 #include "Enemy.h"
 #include "Goblin.h"
 #include "GiantBat.h"
-#include "Battle.h"
 #include <stdio.h>      /* printf, scanf, puts, NULL */
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
@@ -17,13 +16,34 @@ int main()
 {	
 	srand(time(NULL));
 	bool gameLoop = true;
-	Player hero;	
+	Player hero;
+	Goblin goblin;
+	GiantBat bat;
 	while (gameLoop)
+<<<<<<< HEAD
 	{	
 		//hero.MonsterEncounters(0);
 		Battle battle;
 		battle.Start(battle.WhichCreature(), hero);		
 		gameLoop = false;		
+=======
+	{		
+		int creature = rand() % 2 + 1;
+		switch (creature)
+		{
+		case 1:
+			BattleStart(bat, hero);
+			break;
+		case 2:
+			BattleStart(goblin, hero);
+			break;
+		default:
+			std::cout << "Whoops";
+			break;
+		}
+		
+		//gameLoop = false;		
+>>>>>>> parent of abd7da9... Added 'Battle' class file to handle all of the battles and randomise creature encounters
 	}
 	system("PAUSE");
     return 0;
