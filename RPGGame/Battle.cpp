@@ -40,7 +40,8 @@ void Battle::Start(Enemy &enemy, Player &player)
 		if (startOfBattle)
 		{
 			startOfBattle = false;
-			enemy.Appears();
+			//enemy.Appears();
+			std::cout << "A menacing " << enemy.GetName() << " appears. What will you do?\n\n";
 		}
 		if (enemy.GetHealth() > 0)
 		{

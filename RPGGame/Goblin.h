@@ -12,7 +12,7 @@ public:
 	int GetHealth();
 	int GetAttack();
 	const std::string GetName();
-	void Appears();
+	//void Appears();
 	//void TakeDamage(int playerAttack, bool counterCheck);	
 };
 

@@ -15,7 +15,7 @@ public:
 	int GetHealth();
 	int GetAttack();
 	const std::string GetName();
-	void Appears();
+	//void Appears();
 	//void FirstAppearance();		
 	//String myString;
 

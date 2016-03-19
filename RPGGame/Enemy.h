@@ -11,7 +11,7 @@ public:
 	virtual int GetHealth();
 	virtual int GetAttack();
 	virtual const std::string GetName();
-	virtual void Appears();
+	//virtual void Appears();
 	virtual void TakeDamage(int playerAttack, bool counterCheck);
 protected:
 	int m_health;
