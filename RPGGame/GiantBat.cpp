@@ -11,9 +11,7 @@ GiantBat::GiantBat()
 	m_dodgeChance = 5;	*/
 }
 
-GiantBat::~GiantBat() {
-	
-}
+GiantBat::~GiantBat() {}
 
 //int GiantBat::GetHealth()
 //{

@@ -7,14 +7,14 @@ class Enemy
 public:
 	Enemy();	
 	~Enemy();
-//	virtual int GetHealth();
-//	virtual int GetAttack();
-//	virtual const std::string GetName();
-//	virtual void TakeDamage(int playerAttack, bool counterCheck);
+	//virtual int GetHealth();
+	//virtual int GetAttack();
+	//virtual const std::string GetName();
+	//virtual void TakeDamage(int playerAttack, bool counterCheck);
 protected:
-	int m_health;
+	/*int m_health;
 	int m_attack;
 	int m_dodgeChance;	
-	std::string m_name;
+	std::string m_name;*/
 };
 

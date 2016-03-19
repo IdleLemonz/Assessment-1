@@ -11,8 +11,8 @@ class GiantBat :
 public:
 	GiantBat();
 	~GiantBat();
-	/*int GetHealth();
-	int GetAttack();
-	const std::string GetName();*/
+	//int GetHealth();
+//	int GetAttack();
+	//const std::string GetName();
 };
 

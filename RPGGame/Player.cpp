@@ -42,7 +42,7 @@ Player::~Player(){}
 //	}
 //	return counterSuccess;
 //}
-
+//
 //void Player::TakeDamage(Enemy &enemy)
 //{
 //	int attackHitChance = rand() % 6 + 1;
@@ -73,18 +73,18 @@ Player::~Player(){}
 //		std::cout << "The " << enemy.GetName() << "'s attack missed.\n\n";
 //	}
 //}
-
-int Player::GetAttack()
-{
-	int totalAttack = m_attack + WeaponDamage();	
-	return totalAttack;
-}
-
-int Player::GetHealth()
-{
-	return m_health;
-}
-
+//
+//int Player::GetAttack()
+//{
+//	int totalAttack = m_attack + WeaponDamage();	
+//	return totalAttack;
+//}
+//
+//int Player::GetHealth()
+//{
+//	return m_health;
+//}
+//
 //void Player::Attack(Enemy &enemy)
 //{
 //	std::cout << "You swing your blade at the " << enemy.GetName() << ".\n";
@@ -95,49 +95,49 @@ int Player::GetHealth()
 //{
 //	enemy.TakeDamage(GetAttack() - (m_attack / 4), true);
 //}
-
-int Player::WeaponDamage()
-{
-	int weaponAttack = 0;
-	switch (m_weapon)
-	{
-	case 0:
-		weaponAttack = 0;
-		return weaponAttack;
-	case 1:
-		weaponAttack = 2;
-		return weaponAttack;
-	case 2:
-		weaponAttack = 4;
-		return weaponAttack;
-	case 3:
-		weaponAttack = 6;
-		return weaponAttack;
-	default:
-		weaponAttack = 0;
-		return weaponAttack;
-	}
-}
-
-int Player::ArmourDefense()
-{
-	int armourDefense = 0;
-	switch (m_armour)
-	{
-	case 0:
-		armourDefense = 0;
-		return armourDefense;
-	case 1:
-		armourDefense = 2;
-		return armourDefense;
-	case 2:
-		armourDefense = 4;
-		return armourDefense;
-	case 3:
-		armourDefense = 6;
-		return armourDefense;
-	default:
-		armourDefense = 0;
-		return armourDefense;
-	}
-}
+//
+//int Player::WeaponDamage()
+//{
+//	int weaponAttack = 0;
+//	switch (m_weapon)
+//	{
+//	case 0:
+//		weaponAttack = 0;
+//		return weaponAttack;
+//	case 1:
+//		weaponAttack = 2;
+//		return weaponAttack;
+//	case 2:
+//		weaponAttack = 4;
+//		return weaponAttack;
+//	case 3:
+//		weaponAttack = 6;
+//		return weaponAttack;
+//	default:
+//		weaponAttack = 0;
+//		return weaponAttack;
+//	}
+//}
+//
+//int Player::ArmourDefense()
+//{
+//	int armourDefense = 0;
+//	switch (m_armour)
+//	{
+//	case 0:
+//		armourDefense = 0;
+//		return armourDefense;
+//	case 1:
+//		armourDefense = 2;
+//		return armourDefense;
+//	case 2:
+//		armourDefense = 4;
+//		return armourDefense;
+//	case 3:
+//		armourDefense = 6;
+//		return armourDefense;
+//	default:
+//		armourDefense = 0;
+//		return armourDefense;
+//	}
+//}

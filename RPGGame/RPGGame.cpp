@@ -18,14 +18,13 @@ int main()
 	//bool gameLoop = true;
 	//Player hero;	
 	//while (gameLoop)
-	//{	
-	//	//hero.MonsterEncounters(0);
+	//{			
 	//	//Battle battle;
 	//	//battle.Start(battle.WhichCreature(), hero);		
 	//	gameLoop = false;				
 	//}
-	system("PAUSE");
-    return 0;
+	//system("PAUSE");
+ //   return 0;
 }
 
 //void UnitTest()
