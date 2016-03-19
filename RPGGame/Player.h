@@ -15,6 +15,7 @@ public:
 	void Counter(Enemy &enemy);
 	int WeaponDamage();
 	int ArmourDefense();
+	void SetWeapon(int weapon);
 private:
 	int m_health = 100;
 	int m_attack = 5;

@@ -111,18 +111,25 @@ int Player::WeaponDamage()
 	switch (m_weapon)
 	{
 	case 0:
+		// Unarmed
 		weaponAttack = 0;
+		std::cout << "\nUsing no weapon.\n";
 		return weaponAttack;
 	case 1:
+		// Scythe
 		weaponAttack = 2;
+		std::cout << "\nUsing Sycthe.\n";
 		return weaponAttack;
 	case 2:
+		// Rusty Sword
 		weaponAttack = 4;
 		return weaponAttack;
 	case 3:
+		// Iron Sword
 		weaponAttack = 6;
 		return weaponAttack;
 	default:
+		// Unarmed
 		weaponAttack = 0;
 		return weaponAttack;
 	}
@@ -134,19 +141,28 @@ int Player::ArmourDefense()
 	switch (m_armour)
 	{
 	case 0:
+		// No armour
 		armourDefense = 0;
 		return armourDefense;
 	case 1:
+		// Leather armour
 		armourDefense = 2;
 		return armourDefense;
 	case 2:
+		// Rusty armour
 		armourDefense = 4;
 		return armourDefense;
 	case 3:
+		// Iron armour
 		armourDefense = 6;
 		return armourDefense;
 	default:
 		armourDefense = 0;
 		return armourDefense;
 	}
+}
+
+void Player::SetWeapon(int weapon)
+{
+	m_weapon = weapon;
 }
