@@ -6,104 +6,30 @@
 #include "Enemy.h"
 #include "Goblin.h"
 #include "GiantBat.h"
+#include "Battle.h"
 #include <stdio.h>      /* printf, scanf, puts, NULL */
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 
-void BattleStart(Enemy &enemy, Player &player);
 
 int main()
 {	
-	srand(time(NULL));
-	bool gameLoop = true;
-	Player hero;
-	Goblin goblin;
-	GiantBat bat;
-	while (gameLoop)
-<<<<<<< HEAD
-	{	
-		//hero.MonsterEncounters(0);
-		Battle battle;
-		battle.Start(battle.WhichCreature(), hero);		
-		gameLoop = false;		
-=======
-	{		
-		int creature = rand() % 2 + 1;
-		switch (creature)
-		{
-		case 1:
-			BattleStart(bat, hero);
-			break;
-		case 2:
-			BattleStart(goblin, hero);
-			break;
-		default:
-			std::cout << "Whoops";
-			break;
-		}
-		
-		//gameLoop = false;		
->>>>>>> parent of abd7da9... Added 'Battle' class file to handle all of the battles and randomise creature encounters
-	}
+	//srand(time(NULL));
+	//bool gameLoop = true;
+	//Player hero;	
+	//while (gameLoop)
+	//{	
+	//	//hero.MonsterEncounters(0);
+	//	//Battle battle;
+	//	//battle.Start(battle.WhichCreature(), hero);		
+	//	gameLoop = false;				
+	//}
 	system("PAUSE");
     return 0;
 }
 
-void BattleStart(Enemy &enemy, Player &player)
-{
-	bool battle = true;
-	bool startOfBattle = true;
-	while (battle)
-	{
-		if (startOfBattle)
-		{
-			startOfBattle = false;
-			enemy.Appears();			
-		}
-		if (enemy.GetHealth() > 0)
-		{
-			std::cout << "1. Attack \n2. Defend \n3. Run \n\nChoice: ";
-			int choice = 0;
-			std::cin >> choice;
-			std::cout << std::endl;
-			bool counterSuccess = false;
-			switch (choice)
-			{
-			case 1:
-				player.Attack(enemy);
-				if (enemy.GetHealth() > 0)
-				{
-					player.TakeDamage(enemy);
-				}
-				break;
-			case 2:
-				std::cout << "You prepare to defend yourself from the " << enemy.GetName() << ".\n";
-				counterSuccess = player.Defend(enemy.GetAttack());
-				if (counterSuccess)
-				{
-					std::cout << "You succeed in a counter attack.\n";
-					player.Counter(enemy);
-				}
-				counterSuccess = false;
-				break;
-			case 3:
-				std::cout << "You flee the " << enemy.GetName() << ".\n\n";
-				battle = false;
-				break;
-			default:
-				break;
-			}
-		}
-		else if (enemy.GetHealth() <= 0)
-		{
-			std::cout << "You won!\n\n";
-			battle = false;
-		}		
-	}
-}
-
-void UnitTest()
-{
+//void UnitTest()
+//{
 	// Unit Testing code
 	//String heroName("Barnaby");
 	//String heroName2("Barnaby");
@@ -296,4 +222,4 @@ void UnitTest()
 	std::cout << "Test 11 failed. \n\n";
 	file << "Test 11\tSet()\tFailed\n";
 	}*/
-}
+//}

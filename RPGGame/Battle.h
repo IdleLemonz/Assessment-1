@@ -6,15 +6,15 @@
 #include <iostream>
 #include "String.h"
 #include <string>
-//comment
+
 class Battle
 {
 public:
 	Battle();
 	~Battle();
-	void Start(Enemy &enemy, Player &player);
+	/*void Start(Enemy &enemy, Player &player);
 	Enemy& WhichCreature();
 	Goblin goblin;
-	GiantBat bat;
+	GiantBat bat;*/
 };
 

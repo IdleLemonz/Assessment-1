@@ -6,13 +6,10 @@
 class Goblin : public Enemy
 {
 public:
-	Goblin();
-	//Goblin(const Goblin& other);
+	Goblin();	
 	~Goblin();
-	int GetHealth();
+	/*int GetHealth();
 	int GetAttack();
-	const std::string GetName();
-	//void Appears();
-	//void TakeDamage(int playerAttack, bool counterCheck);	
+	const std::string GetName();	*/
 };
 
