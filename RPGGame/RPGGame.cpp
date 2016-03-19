@@ -1,31 +1,33 @@
-#include <iostream>
-#include "String.h"
-#include <string>
-#include <fstream>
 #include "Player.h"
 #include "Enemy.h"
 #include "Goblin.h"
 #include "GiantBat.h"
 #include "Battle.h"
+#include <iostream>
 #include <stdio.h>      /* printf, scanf, puts, NULL */
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 
+void BattleStart(Enemy &enemy, Player &player);
 
 int main()
-{	
-	//srand(time(NULL));
-	//bool gameLoop = true;
-	//Player hero;	
-	//while (gameLoop)
-	//{			
-	//	//Battle battle;
-	//	//battle.Start(battle.WhichCreature(), hero);		
-	//	gameLoop = false;				
-	//}
-	//system("PAUSE");
- //   return 0;
+{
+	srand(time(NULL));
+	bool gameLoop = true;
+	Player hero;
+	Goblin goblin;
+	GiantBat bat;
+	while (gameLoop)
+	{
+		//BattleStart(bat, hero);
+		Battle battle;
+		battle.Start(battle.WhichCreature(), hero);
+		//gameLoop = false;		
+	}
+	system("PAUSE");
+	return 0;
 }
+
 
 //void UnitTest()
 //{

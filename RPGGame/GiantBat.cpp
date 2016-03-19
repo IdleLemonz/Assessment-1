@@ -1,29 +1,29 @@
 #include "GiantBat.h"
-#include "String.h"
-#include "Player.h"
 #include <iostream>
 
-GiantBat::GiantBat() 
+GiantBat::GiantBat()
 {
-	/*m_health = 30;
+	m_health = 30;
 	m_attack = 4;
 	m_name = "Giant Bat";
-	m_dodgeChance = 5;	*/
+	m_dodgeChance = 5;
 }
 
-GiantBat::~GiantBat() {}
+GiantBat::~GiantBat()
+{
+}
 
-//int GiantBat::GetHealth()
-//{
-//	return m_health;
-//}
-//
-//int GiantBat::GetAttack()
-//{
-//	return m_attack;
-//}
-//
-//const std::string GiantBat::GetName()
-//{
-//	return m_name;
-//}
+int GiantBat::GetHealth()
+{
+	return m_health;
+}
+
+int GiantBat::GetAttack()
+{
+	return m_attack;
+}
+
+const std::string GiantBat::GetName()
+{
+	return m_name;
+}

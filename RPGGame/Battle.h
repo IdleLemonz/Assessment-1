@@ -3,18 +3,14 @@
 #include "Enemy.h"
 #include "Goblin.h"
 #include "GiantBat.h"
-#include <iostream>
-#include "String.h"
-#include <string>
-
 class Battle
 {
 public:
 	Battle();
 	~Battle();
-	/*void Start(Enemy &enemy, Player &player);
-	Enemy& WhichCreature();
+	Enemy& Battle::WhichCreature();
+	void Start(Enemy &enemy, Player &player);
 	Goblin goblin;
-	GiantBat bat;*/
+	GiantBat bat;
 };
 

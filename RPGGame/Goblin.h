@@ -1,15 +1,15 @@
 #pragma once
 #include "Enemy.h"
-#include "Player.h"
 #include <string>
 
 class Goblin : public Enemy
 {
 public:
-	Goblin();	
+	Goblin();
 	~Goblin();
-	/*int GetHealth();
+	int GetHealth();
 	int GetAttack();
-	const std::string GetName();	*/
+	const std::string GetName();
+
 };
 
